@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marks Realty | NYC Voucher Apartments</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #e02020;
+      padding: 1rem 2rem;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: #fff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+    .hero button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .hero button:hover {
+      background-color: #333;
+    }
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .section h2 {
+      color: #e02020;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .feature {
+      width: 280px;
+      padding: 1.5rem;
+      background: #f5f5f5;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      font-weight: 600;
+    }
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 1.5rem;
+      padding: 1rem 0;
+      scroll-snap-type: x mandatory;
+    }
+    .listing {
+      scroll-snap-align: center;
+      min-width: 320px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .listing:hover {
+      transform: scale(1.05);
+    }
+    .listing img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .listing div {
+      padding: 1rem;
+      font-weight: 500;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    input, select, textarea {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    button[type=submit] {
+      background: #e02020;
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button[type=submit]:hover {
+      background-color: #c01c1c;
+    }
+    footer {
+      background: #000;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 1rem;
+      font-size: 1.5rem;
+      z-index: 999;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Marks Realty</strong></div>
+    <nav>
+      <a href="#listings">Listings</a>
+      <a href="#about">About</a>
+      <a href="#form">Apply</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Program-Approved Apartments in NYC</h1>
+    <p>We help CityFHEPS, HASA, and Section 8 renters find homes fast.</p>
+    <a href="#form"><button>Get Started</button></a>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose Marks Realty?</h2>
+    <div class="features">
+      <div class="feature">✅ Fast Approval Support</div>
+      <div class="feature">📍 Serving Bronx, Queens & Brooklyn</div>
+      <div class="feature">🔑 Voucher-Friendly Listings</div>
+    </div>
+  </section>
+
+  <section class="section" id="listings">
+    <h2>Featured Listings</h2>
+    <div class="slider" tabindex="0">
+      <div class="listing">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=400&q=80" alt="1BR in Bronx" />
+        <div><strong>1BR in Bronx</strong><br />$2,450 - CityFHEPS OK</div>
+      </div>
+      <div class="listing">
+        <img src="https://images.unsplash.com/photo-1600585153825-cbe9f7c63b90?auto=format&fit=crop&w=400&q=80" alt="2BR in Queens" />
+        <div><strong>2BR in Queens</strong><br />$2,696 - HASA Welcome</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Marks Realty</h2>
+    <p>At Marks Realty, we specialize in connecting NYC renters with quality apartments that accept housing vouchers. With responsive service, program expertise, and hundreds of successful clients, we make the process simple and stress-free.</p>
+  </section>
+
+  <section class="section">
+    <h2>What Our Clients Say</h2>
+    <p><em>“Got approved for CityFHEPS in just 3 days thanks to Marks Realty!” – Patricia Nelson</em></p>
+    <p><em>“Fast and reliable service. Highly recommend.” – Carmen Laguer</em></p>
+  </section>
+
+  <section class="section" id="form">
+    <h2>Apply Now</h2>
+   <section class="section" id="form">
+  <h2>Apply Now</h2>
+  <div style="max-width: 600px; margin: 0 auto;">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSeaZ5QiMrl93B5EUaCCDicmpyzT49M3DwIPFpwg1cH2nYy6Qw/viewform?embedded=true"
+      width="100%"
+      height="800"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      style="border: none;"
+      >Loading…</iframe>
+  </div>
+</section>
+
+  </section>
+
+  <footer id="contact">
+    <p>Marks Realty | 597 5th Ave, New York, NY</p>
+    <p>📞 +1 718-644-5393 | ✉️ realty0113@gmail.com</p>
+    <p>Follow us on Instagram, Facebook, and TikTok</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const data = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        program: document.getElementById('program').value,
+        apartment: document.getElementById('apartment').value,
+        borough: document.getElementById('borough').value,
+        budget: document.getElementById('budget').value,
+        message: document.getElementById('message').value,
+      };
+
+      try {
+        const response = await fetch('YOUR_WEB_APP_URL', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(data),
+        });
+        const result = await response.json();
+
+        if (result.result === 'success') {
+          alert('Form submitted successfully!');
+          form.reset();
+        } else {
+          alert('Error submitting form: ' + (result.message || 'Unknown error'));
+        }
+      } catch (err) {
+        alert('Failed to submit form. Please try again later.');
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>
