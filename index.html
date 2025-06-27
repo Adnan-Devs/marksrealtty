@@ -87,68 +87,11 @@
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
       font-weight: 600;
     }
-    .slider {
-      display: flex;
-      overflow-x: auto;
-      gap: 1.5rem;
-      padding: 1rem 0;
-      scroll-snap-type: x mandatory;
-    }
-    .listing {
-      scroll-snap-align: center;
-      min-width: 320px;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-    .listing:hover {
-      transform: scale(1.05);
-    }
-    .listing img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .listing div {
-      padding: 1rem;
-      font-weight: 500;
-    }
-    form {
-      max-width: 600px;
+    .programs, .tips {
+      max-width: 800px;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
-      background: #f9f9f9;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       text-align: left;
-    }
-    input, select, textarea {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      width: 100%;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-    button[type=submit] {
-      background: #e02020;
-      color: white;
-      border: none;
-      padding: 1rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button[type=submit]:hover {
-      background-color: #c01c1c;
+      line-height: 1.8;
     }
     footer {
       background: #000;
@@ -157,17 +100,14 @@
       text-align: center;
       font-size: 0.95rem;
     }
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      padding: 1rem;
-      font-size: 1.5rem;
-      z-index: 999;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    .footer-social {
+      margin-top: 1rem;
+    }
+    .footer-social a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 1.2rem;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -175,8 +115,9 @@
   <header>
     <div><strong>Marks Realty</strong></div>
     <nav>
-      <a href="#listings">Listings</a>
       <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#tips">Tips</a>
       <a href="#form">Apply</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -188,100 +129,55 @@
     <a href="#form"><button>Get Started</button></a>
   </section>
 
-  <section class="section">
-    <h2>Why Choose Marks Realty?</h2>
-    <div class="features">
-      <div class="feature">✅ Fast Approval Support</div>
-      <div class="feature">📍 Serving Bronx, Queens & Brooklyn</div>
-      <div class="feature">🔑 Voucher-Friendly Listings</div>
-    </div>
-  </section>
-
-  <section class="section" id="listings">
-    <h2>Featured Listings</h2>
-    <div class="slider" tabindex="0">
-      <div class="listing">
-        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=400&q=80" alt="1BR in Bronx" />
-        <div><strong>1BR in Bronx</strong><br />$2,450 - CityFHEPS OK</div>
-      </div>
-      <div class="listing">
-        <img src="https://images.unsplash.com/photo-1600585153825-cbe9f7c63b90?auto=format&fit=crop&w=400&q=80" alt="2BR in Queens" />
-        <div><strong>2BR in Queens</strong><br />$2,696 - HASA Welcome</div>
-      </div>
-    </div>
-  </section>
-
   <section class="section" id="about">
     <h2>About Marks Realty</h2>
     <p>At Marks Realty, we specialize in connecting NYC renters with quality apartments that accept housing vouchers. With responsive service, program expertise, and hundreds of successful clients, we make the process simple and stress-free.</p>
   </section>
 
-  <section class="section">
-    <h2>What Our Clients Say</h2>
-    <p><em>“Got approved for CityFHEPS in just 3 days thanks to Marks Realty!” – Patricia Nelson</em></p>
-    <p><em>“Fast and reliable service. Highly recommend.” – Carmen Laguer</em></p>
+  <section class="section" id="programs">
+    <h2>Voucher Programs We Support</h2>
+    <div class="programs">
+      <p><strong>CityFHEPS:</strong> A rental assistance program designed to help individuals and families who are homeless or at risk of eviction.</p>
+      <p><strong>HASA:</strong> For individuals living with HIV/AIDS. This program offers rent subsidies and support services.</p>
+      <p><strong>Section 8:</strong> Federal housing voucher for low-income families. We connect tenants to landlords who accept this benefit.</p>
+    </div>
+  </section>
+
+  <section class="section" id="tips">
+    <h2>Helpful Tips for Apartment Seekers</h2>
+    <div class="tips">
+      <ul>
+        <li>Keep your documents organized and ready (ID, voucher, income proof, etc.).</li>
+        <li>Be responsive and attend viewings on time — good apartments move fast.</li>
+        <li>Communicate your needs clearly to improve match success.</li>
+        <li>Ask about utilities, lease terms, and application process upfront.</li>
+      </ul>
+    </div>
   </section>
 
   <section class="section" id="form">
     <h2>Apply Now</h2>
-   <section class="section" id="form">
-  <h2>Apply Now</h2>
-  <div style="max-width: 600px; margin: 0 auto;">
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSeaZ5QiMrl93B5EUaCCDicmpyzT49M3DwIPFpwg1cH2nYy6Qw/viewform?embedded=true"
-      width="100%"
-      height="800"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0"
-      style="border: none;"
+    <div style="max-width: 600px; margin: 0 auto;">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSeaZ5QiMrl93B5EUaCCDicmpyzT49M3DwIPFpwg1cH2nYy6Qw/viewform?embedded=true"
+        width="100%"
+        height="800"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        style="border: none;"
       >Loading…</iframe>
-  </div>
-</section>
-
+    </div>
   </section>
 
   <footer id="contact">
-    <p>Marks Realty | 597 5th Ave, New York, NY</p>
+    <p><strong>Marks Realty</strong> | 597 5th Ave, New York, NY</p>
     <p>📞 +1 718-644-5393 | ✉️ realty0113@gmail.com</p>
-    <p>Follow us on Instagram, Facebook, and TikTok</p>
+    <p class="footer-social">
+      <a href="https://www.instagram.com/marksrealtyny/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/MarksRealtyNY/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </p>
+    <p>© 2025 Marks Realty. All rights reserved.</p>
   </footer>
-
-  <script>
-    const form = document.getElementById('contactForm');
-
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-
-      const data = {
-        name: document.getElementById('name').value,
-        phone: document.getElementById('phone').value,
-        program: document.getElementById('program').value,
-        apartment: document.getElementById('apartment').value,
-        borough: document.getElementById('borough').value,
-        budget: document.getElementById('budget').value,
-        message: document.getElementById('message').value,
-      };
-
-      try {
-        const response = await fetch('YOUR_WEB_APP_URL', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(data),
-        });
-        const result = await response.json();
-
-        if (result.result === 'success') {
-          alert('Form submitted successfully!');
-          form.reset();
-        } else {
-          alert('Error submitting form: ' + (result.message || 'Unknown error'));
-        }
-      } catch (err) {
-        alert('Failed to submit form. Please try again later.');
-        console.error(err);
-      }
-    });
-  </script>
 </body>
 </html>
